@@ -2,7 +2,7 @@ import React from 'react'
 
 function EventsPage() {
   return (
-    <div>EventsPage</div>
+    <h1>EventsPage</h1>
   )
 }
 
