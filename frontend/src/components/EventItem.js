@@ -1,9 +1,13 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useSubmit } from "react-router-dom";
 import classes from "./EventItem.module.css";
 
 function EventItem({ event }) {
+  const submit = useSubmit();
   function startDeleteHandler() {
-    // ...
+    const proceed = window.confirm("Are you Sure");
+    if (proceed) {
+      submit(null, { method: "DELETE" });
+    }
   }
 
   return (
